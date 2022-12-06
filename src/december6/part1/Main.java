@@ -14,12 +14,12 @@ public class Main {
         //input = "bvwbjplbgvbhsrlpgdmjqwftvncz";
         //input = "nppdvjthqldpwncqszvftbrmjlhg";
 
-        int characterCount = 4;
+        int characterCount = 14;
         for (int i = characterCount - 1; i < input.length(); i++) {
-            String currentFourCharacters = input.substring(i - 3, i + 1);
+            String currentCharacters = input.substring(i - 13, i + 1);
             boolean isMarker = true;
-            for (int j = 0; j < currentFourCharacters.length(); j++) {
-                if (currentFourCharacters.lastIndexOf(currentFourCharacters.charAt(j)) != j) {
+            for (int j = 0; j < currentCharacters.length(); j++) {
+                if (currentCharacters.lastIndexOf(currentCharacters.charAt(j)) != j) {
                     isMarker = false;
                     break;
                 }
